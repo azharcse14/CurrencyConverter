@@ -13,8 +13,7 @@ class QuotesViewHolder(val binding: ChildQuotesLayoutBinding) :
     val name = binding.nameTextTvId
 
     fun bind(item: Quote) {
-        val df = DecimalFormat("#.##")
-        df.roundingMode = RoundingMode.DOWN
+        val df = DecimalFormat("#.###")
         val roundValue = df.format(item.value)
         amount.text = roundValue
         name.text = item.key
