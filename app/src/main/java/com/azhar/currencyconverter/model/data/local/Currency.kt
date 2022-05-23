@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 data class Currency(
     @PrimaryKey
     @ColumnInfo
-    var key:String,
+    var key: String,
     @ColumnInfo(name = "value")
-    var value:String
+    var value: String
 )

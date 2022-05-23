@@ -11,7 +11,7 @@ object RetrofitBuilder {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
-    val api:ApiService by lazy {
+    val api: ApiService by lazy {
         retrofit.create(ApiService::class.java)
     }
 }

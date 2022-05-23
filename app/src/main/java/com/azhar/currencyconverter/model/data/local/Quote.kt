@@ -9,7 +9,7 @@ data class Quote(
     @PrimaryKey
 
     @ColumnInfo(name = "quote_key")
-    var key:String,
+    var key: String,
     @ColumnInfo(name = "quote_value")
-    var value:Double
+    var value: Double
 )
