@@ -29,5 +29,9 @@ interface ConverterDao {
     suspend fun getQuotes() : Quote
 
     @Query("SELECT quote_value FROM quotes where quote_key=:key")
-    fun getQuoteValue(key:String) : LiveData<String>
+    fun getQuoteValue(key:String) : Double
+
+    @Query("SELECT quote_key, quote_value FROM quotes")
+    fun getAllQuote() : List<Quote>
+
 }
