@@ -11,5 +11,5 @@ data class Quote(
     @ColumnInfo(name = "quote_key")
     var key:String,
     @ColumnInfo(name = "quote_value")
-    var value:String
+    var value:Double
 )
