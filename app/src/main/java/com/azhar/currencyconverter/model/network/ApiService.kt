@@ -8,11 +8,11 @@ import retrofit2.http.Query
 
 interface ApiService {
 
-    @Headers("apikey: tf4Uk4xqnXZbxTfkPuIjlftL4VPfPDlA")
+    @Headers("apikey: 8hfNZ1wKRuiF0FyqXYiXjXidtKV3cggV")
     @GET("list")
     suspend fun getCurrencyList() : CurrencyList
 
-    @Headers("apikey: tf4Uk4xqnXZbxTfkPuIjlftL4VPfPDlA")
+    @Headers("apikey: 8hfNZ1wKRuiF0FyqXYiXjXidtKV3cggV")
     @GET("live")
     suspend fun getQuotes(
         @Query("source") source:String,
