@@ -10,7 +10,7 @@ import com.azhar.currencyconverter.model.data.local.Quote
 @Database(entities = [Currency::class, Quote::class], version = 1)
 abstract class ConverterDatabase : RoomDatabase() {
 
-    abstract fun ConverterDB() : ConverterDao
+    abstract fun converterDao() : ConverterDao
 
     companion object{
         @Volatile
