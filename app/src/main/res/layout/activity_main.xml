@@ -18,7 +18,6 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter the conversion value"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -26,6 +25,7 @@
                 android:id="@+id/amount_input_et_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="end"
                 android:inputType="numberDecimal" />
 
         </com.google.android.material.textfield.TextInputLayout>
