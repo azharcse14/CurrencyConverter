@@ -1,7 +1,8 @@
-package com.azhar.currencyconverter
+package com.azhar.currencyconverter.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.azhar.currencyconverter.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
