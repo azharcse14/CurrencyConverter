@@ -1,18 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.activity.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="12dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/value_input_text_field_id"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter the conversion value"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/amount_input_et_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dropdown_list_id"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@id/value_input_text_field_id"
+            app:layout_constraintTop_toBottomOf="@id/value_input_text_field_id">
+
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/autoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:dropDownHeight="match_parent"
+                android:editable="false"
+                android:inputType="none"
+                android:text="Choose Currency" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dropdown_list_id"
+            app:spanCount="3"
+            tools:listitem="@layout/child_quotes_layout" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
